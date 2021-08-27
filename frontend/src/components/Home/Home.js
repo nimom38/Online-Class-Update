@@ -1,7 +1,7 @@
 import { Grid, Typography } from '@material-ui/core'
 import React from 'react'
 import Calendar from './Calendar'
-import Announcementhome from './Announcementhome/Announcementhome'
+import Announcementhome from '../Announcement'
 import Attendance from './Attendance'
 import Ongoingclass from './Ongoingclass'
 import Upcomingclass from './Upcomingclass'
