@@ -4,14 +4,20 @@ import Tab from '@material-ui/core/Tab'
 import { Grid } from '@material-ui/core'
 import { useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
+import { useStateValue } from '../../StateProvider'
 
 export default function VerticalTabs() {
+  const [{ assignment_navbar }, dispatch] = useStateValue()
   const [value, setValue] = useState(0)
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up('lg'))
 
   const handleChange = (event, newValue) => {
     setValue(newValue)
+    dispatch({
+      type: 'TOGGLE_ASSIGNMENT_NAVBAR',
+      item: newValue === 0 ? 'upcoming' : 'past',
+    })
   }
 
   return (
@@ -86,9 +92,7 @@ export default function VerticalTabs() {
                 order: 2,
               }
         }
-      >
-        
-      </Grid>
+      ></Grid>
     </Grid>
   )
 }
