@@ -5,8 +5,10 @@ import { Grid } from '@material-ui/core'
 import { useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { useStateValue } from '../../StateProvider'
+import Past from './Past'
+import Upcoming from './Upcoming'
 
-export default function VerticalTabs() {
+export default function Assignment() {
   const [{ assignment_navbar }, dispatch] = useStateValue()
   const [value, setValue] = useState(0)
   const theme = useTheme()
@@ -34,7 +36,7 @@ export default function VerticalTabs() {
                 position: 'sticky',
                 top: 70,
                 order: 2,
-                opacity: 1,
+                zIndex: 200,
               }
             : {
                 backgroundColor: theme.palette.background.default,
@@ -42,7 +44,7 @@ export default function VerticalTabs() {
                 top: 56,
                 order: 1,
                 width: '100%',
-                opacity: 1,
+                zIndex: 200,
               }
         }
       >
@@ -92,7 +94,9 @@ export default function VerticalTabs() {
                 order: 2,
               }
         }
-      ></Grid>
+      >
+        {assignment_navbar === 'past' ? <Past /> : <Upcoming />}
+      </Grid>
     </Grid>
   )
 }
