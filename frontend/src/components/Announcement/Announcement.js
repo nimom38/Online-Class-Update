@@ -1,21 +1,11 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
 import Minicards from './Minicards'
-
-const useStyles = makeStyles({
-  root: {
-    minWidth: 275,
-  },
-})
+import { Grid } from '@material-ui/core'
 
 export default function Announcementhome() {
-  const classes = useStyles()
-
   return (
-    <Card className={classes.root}>
-      <CardContent>
+    <Grid container spacing={3}>
+      <Grid item lg={7} xs={12}>
         <Minicards
           title={'Exam hobe!!!'}
           time={'August 12th, 2021 - 6:00pm'}
@@ -23,6 +13,8 @@ export default function Announcementhome() {
             'Next month teke exam shuru hobe. Everyone take preparation. Come to Chattogram as soon as possible'
           }
         />
+      </Grid>
+      <Grid item lg={7} xs={12}>
         <Minicards
           title={'Exam form fillup'}
           time={'August 11th, 2021 - 6:00pm'}
@@ -30,12 +22,39 @@ export default function Announcementhome() {
             'Everyone collect your forms from your respective halls. Total fee is 1100 TK.'
           }
         />
+      </Grid>
+
+      <Grid item lg={7} xs={12}>
         <Minicards
           title={'Exam postponed'}
           time={'August 10th, 2021 - 6:00pm'}
           details={'Exam has been postponed. Shobai jar jar bari chole jao.'}
         />
-      </CardContent>
-    </Card>
+      </Grid>
+
+      <Grid item lg={7} xs={12}>
+        <Minicards
+          title={'Exam postponed'}
+          time={'August 10th, 2021 - 6:00pm'}
+          details={'Exam has been postponed. Shobai jar jar bari chole jao.'}
+        />
+      </Grid>
+
+      <Grid item lg={7} xs={12}>
+        <Minicards
+          title={'Exam postponed'}
+          time={'August 10th, 2021 - 6:00pm'}
+          details={'Exam has been postponed. Shobai jar jar bari chole jao.'}
+        />
+      </Grid>
+
+      <Grid item lg={7} xs={12}>
+        <Minicards
+          title={'Exam postponed'}
+          time={'August 10th, 2021 - 6:00pm'}
+          details={'Exam has been postponed. Shobai jar jar bari chole jao.'}
+        />
+      </Grid>
+    </Grid>
   )
 }
