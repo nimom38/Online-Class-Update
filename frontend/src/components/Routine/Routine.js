@@ -23,6 +23,7 @@ const useStyles = makeStyles({
 })
 
 const Routine = () => {
+  window.scrollTo(0, 0)
   const classes = useStyles()
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up('lg'))

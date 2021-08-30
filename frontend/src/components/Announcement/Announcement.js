@@ -3,6 +3,7 @@ import Minicards from './Minicards'
 import { Grid } from '@material-ui/core'
 
 export default function Announcementhome() {
+  window.scrollTo(0, 0)
   return (
     <Grid container spacing={3}>
       <Grid item lg={7} xs={12}>

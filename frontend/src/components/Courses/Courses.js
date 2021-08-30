@@ -3,6 +3,7 @@ import React from 'react'
 import Minicard from './Minicard'
 
 const Courses = () => {
+  window.scrollTo(0, 0)
   return (
     <div>
       <Grid container spacing={3}>

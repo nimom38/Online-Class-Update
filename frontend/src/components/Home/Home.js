@@ -9,6 +9,7 @@ import Upcomingexams from './Upcomingexams'
 import Upcomingtasks from './Upcomingtasks'
 
 const Home = () => {
+  window.scrollTo(0, 0)
   return (
     <div>
       <Grid container spacing={3}>
