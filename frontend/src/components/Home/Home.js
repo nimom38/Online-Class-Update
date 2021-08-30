@@ -1,7 +1,7 @@
 import { Grid, Typography } from '@material-ui/core'
 import React from 'react'
 import Calendar from './Calendar'
-import Announcementhome from '../Announcement'
+import Announcement from './Announcement'
 import Attendance from './Attendance'
 import Ongoingclass from './Ongoingclass'
 import Upcomingclass from './Upcomingclass'
@@ -53,7 +53,8 @@ const Home = () => {
             </Grid>
             <Grid item xs={12}>
               <Typography variant='h5'>ANNOUNCEMENT</Typography>
-              <Announcementhome />
+
+              <Announcement />
             </Grid>
           </Grid>
         </Grid>

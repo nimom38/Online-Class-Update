@@ -1,5 +1,5 @@
 import React from 'react'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 import Typography from '@material-ui/core/Typography'
 
@@ -7,6 +7,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     borderRadius: 25,
     minWidth: 275,
+    backgroundColor: theme.palette.primary.main,
+    color: 'white',
     paddingTop: 17,
     paddingLeft: 17,
     paddingRight: 17,
@@ -16,27 +18,15 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Minicards({ title, time, details }) {
   const classes = useStyles()
-  const theme = useTheme()
 
   return (
     <Card className={classes.root}>
-      <div
-        style={{
-          backgroundColor: theme.palette.primary.main,
-          display: 'inline-block',
-          padding: '5px',
-          color: 'white',
-          borderRadius: '12px',
-        }}
-      >
-        <Typography variant='h5' component='h2'>
-          {title}
-        </Typography>
-        <Typography variant='caption' gutterBottom>
-          {time}
-        </Typography>
-      </div>
-
+      <Typography variant='h5' component='h2'>
+        {title}
+      </Typography>
+      <Typography variant='caption' gutterBottom>
+        {time}
+      </Typography>
       <br />
       <br />
       <Typography paragraph>{details}</Typography>
