@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    borderRadius: 25,
+    borderRadius: 15,
     minWidth: 275,
     paddingTop: 17,
     paddingLeft: 17,

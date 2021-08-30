@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
   icontext: {
     padding: '7px',
     marginLeft: '20px',
-    display: 'none',
+    // display: 'none',
     [theme.breakpoints.up('sm')]: {
       marginLeft: 'none',
       display: 'block',
