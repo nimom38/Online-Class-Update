@@ -61,11 +61,9 @@ const useStyles = makeStyles((theme) => ({
   icons: {
     height: '50px',
     width: 'auto',
-    // backgroundColor: 'red',
   },
   icontext: {
     padding: '7px',
-    // backgroundColor: 'yellow',
     marginLeft: '20px',
     display: 'none',
     [theme.breakpoints.up('sm')]: {
